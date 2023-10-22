@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Document</title>
+   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Poppins", sans-serif;
+            background-image: linear-gradient(gray,white)
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        
+        /* //........top text ........// */
+        
+        :root {
+            /* //....... Color ........// */
+            --primary-color: #fffcfc;
+            --light-black: rgba(0, 0, 0, 0.89);
+            --black: #000;
+            --white: #fff;
+            --grey: #aaa;
+        }
+        
+        
+        /* //........top text ........// */
+        
+        .top-txt {
+            background-color:rgb(7, 7, 28) ;
+        }
+        
+        .head {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(244, 233, 233, 0.945);
+            padding: 10px 0;
+            font-size: 14px;
+        
+        }
+        
+        .head a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.945);
+            margin: 0 10px;
+        }
+        
+        
+        /* //........ Navbar ........// */
+        
+        .navbar input[type="checkbox"],
+        .navbar .hamburger-lines {
+            display: none;
+        }
+        
+        .navbar {
+            box-shadow: 0 5px 4px rgb(146 161 176 / 15%);
+            position: sticky;
+            top: 0;
+            background: var(--black);
+            color: var(--white);
+            z-index: 100;
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        
+        .navbar img {
+            margin-left: 3rem;
+        }
+        
+        .menu-items {
+            order: 2;
+            display: flex;
+            margin-right: 3rem;
+            position: relative;
+            left:30px;
+        }
+        
+        .menu-items li {
+            list-style: none;
+            margin-left: 1.5rem;
+            font-size: 1.2rem;
+        display: flex;
+            
+        }
+        
+        .navbar-container ul a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 18px;
+            position: relative;
+            
+        }
+        
+        .navbar-container ul a:after {
+            content: "";
+            position: absolute;
+            background: var(--primary-color);
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: 0.3s;
+        }
+        .active{
+            width:100%;
+        }
+        .navbar-container ul a:hover:after {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                opacity: 0.95;
+            }
+            .navbar-container input[type="checkbox"],
+            .navbar-container .hamburger-lines {
+                display: block;
+            }
+            .navbar-container {
+                display: block;
+                position: relative;
+                height: 64px;
+            }
+            .navbar-container input[type="checkbox"] {
+                position: absolute;
+                display: block;
+                height: 32px;
+                width: 30px;
+                top: 20px;
+                left: 20px;
+                z-index: 5;
+                opacity: 0;
+                cursor: pointer;
+            }
+            .navbar-container .hamburger-lines {
+                display: block;
+                height: 28px;
+                width: 35px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .navbar-container .hamburger-lines .line {
+                display: block;
+                height: 4px;
+                width: 100%;
+                border-radius: 10px;
+                background: #333;
+            }
+            .navbar-container .hamburger-lines .line1 {
+                transform-origin: 0% 0%;
+                transition: transform 0.3s ease-in-out;
+            }
+            .navbar-container .hamburger-lines .line2 {
+                transition: transform 0.2s ease-in-out;
+            }
+            .navbar-container .hamburger-lines .line3 {
+                transform-origin: 0% 100%;
+                transition: transform 0.3s ease-in-out;
+            }
+            .navbar .menu-items {
+                padding-top: 100px;
+                background: #fff;
+                height: 100vh;
+                max-width: 100%;
+                transform: translate(-150%);
+                display: flex;
+                flex-direction: column;
+                /* margin-left: -40px;
+                padding-left: 40px; */
+                text-align: center;
+                transition: transform 0.5s ease-in-out;
+                /* box-shadow: 5px 0px 10px 0px #aaa; */
+                overflow: scroll;
+            }
+            .navbar .menu-items li {
+                margin-bottom: 2rem;
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+            .menu-items li,
+            .navbar img {
+                margin: 0;
+            }
+            .navbar .menu-items li:nth-child(1) {
+                margin-top: 1.5rem;
+            }
+            .navbar-container .logo img {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                margin-top: 8px;
+            }
+            .navbar-container input[type="checkbox"]:checked~.menu-items {
+                transform: translateX(0);
+            }
+            .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+                transform: rotate(45deg);
+            }
+            .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+                transform: scaleY(0);
+            }
+            .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+                transform: rotate(-45deg);
+            }
+            .navbar-container input[type="checkbox"]:checked~.home_page img {
+                display: none;
+                background: #fff;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .navbar-container input[type="checkbox"]:checked~.navbar-container img {
+                display: none;
+            }
+        }
+.container{
+    width: 800px;
+    margin: auto;
+    transition: 0.5s;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+header .shopping img{
+    width: 100px;
+   position: relative;
+   right:700px
+   
+}
+@media(max-width:1500px){
+    .list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+    position: relative;
+    right: 100px;
+    left: 50px;
+}
+}
+.iop{
+   max-width:2000px;
+   display:flex;
+   -webkit-text-fill-color: #e91e63;
+   text-indent: 550px;
+            /*animation-name: hjkl1;*/
+            animation-name: hjkl2;
+            animation-duration: 15s;
+            animation-iteration-count: 150;
+    
+}
+@keyframes hjkl2{
+            0%{
+               background-color: aqua;
+               -webkit-text-fill-color: blue;
+
+            }
+            25%{
+               background-color: coral;
+               -webkit-text-fill-color:darkmagenta;
+            }
+            75%{
+              background-color: darkturquoise;
+              -webkit-text-fill-color:red;
+            }
+            100%{
+             background-color: chartreuse;  
+             -webkit-text-fill-color:blueviolet;
+            }
+        }
+header .shopping span{
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    position: absolute;
+    top: -5px;
+    right: 800px;
+    padding: 3px 10px;
+    height: 50px;
+    width: 50px;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+    position: relative;
+ 
+   
+
+}
+@media (max-width:950px){
+   .list{ display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+    position: relative;}
+    
+    .list .item{
+    text-align: center;
+    background-color: #DCE0E1;
+height: 600px;
+width: 400px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+    position: relative;
+
+    left:20px;
+}
+.list .item img{
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    background-color: #eeeb0d;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.list .item button:hover{
+    background-color: #979797;
+    border-color: brown;
+    color: #000000;
+   
+}
+.form-control{
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    border-color: #903cff;
+   text-align: center;
+  -webkit-text-fill-color: black;
+ position: relative;
+ top:-650px;
+}
+.form-control:hover{
+    caret-color: #2874f0;
+    border-color: #2874f0;
+}
+}
+.list .item{
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+    position: relative;
+    right: 200px;
+}
+.list .item img{
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    background-color: #eeeb0d;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.list .item button:hover{
+    background-color: #979797;
+    border-color: brown;
+    color: #000000;
+   
+}
+.checked{
+  color: orange;
+}
+.card{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 800px;
+ height: 500px;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+    overflow: auto;
+    
+}
+.active .card{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.card h1{
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.card .checkOut div{
+    background-color: #f1fd07;
+    width: 100%;
+    height: 70px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    position: sticky;
+  
+}
+.card .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    position: static;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.listCard li img{
+    width:40%;
+}
+.listCard li button{
+    background-color: #fff5;
+    border: none;
+}
+.listCard .count{
+    margin: 0 10px;
+}
+.jk{
+    -webkit-text-fill-color: green;
+}
+.nextpage{
+    border: 3px solid rgb(18, 18, 18);
+   
+}
+ /* //........ Footer ...... // */
+        
+ footer {
+            width: 100%;
+            background: var(--black);
+        }
+        
+        .footer-container .content_1 img {
+            height: 25px;
+            width: 180px;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 0;
+        }
+        
+        .footer-container h4 {
+            color: var(--white);
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        
+        .footer-container a {
+            display: block;
+            text-decoration: none;
+            color: var(--grey);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+   
+        
+        .footer-container a:hover {
+            color:#903cff;
+        }
+        .footer-container .content_1 p,
+        .footer-container .content_4 p {
+            color: var(--grey);
+            margin: 25px 0;
+            font-size: 14px;
+        }
+        
+        .footer-container .content_4 input[type="email"] {
+            background-color: var(--black);
+            border: none;
+            color: var(--white);
+            outline: none;
+            padding: 15px 0;
+        }
+        
+        .footer-container .content_4 .f-mail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-container .content_4 .bx {
+            color: var(--white);
+        }
+        
+        .f-design {
+            width: 100%;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .f-design .f-design-txt {
+            border-top: 1px solid var(--grey);
+            padding: 25px 0;
+            font-size: 14px;
+            color: var(--grey);
+        }
+       
+.logo2 img{
+   background: transparent;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  background-color: #2874f0;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.open{
+    position: relative; 
+    right: 690px;
+    animation-name: cal;
+    animation-duration: 5s;
+    animation-iteration-count: 1500;
+}
+@keyframes cal{
+    0%{
+        color:rgb(41, 241, 111);
+    }
+    25%{
+        color:rgb(64, 255, 239);
+    }
+    75%{
+        color:rgb(201, 173, 9);
+    }
+    100%{
+        color:rgb(254, 66, 66);
+    }
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.form-control{
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    border-color: #903cff;
+   text-align: center;
+  -webkit-text-fill-color: black;
+ 
+}
+.form-control:hover{
+    caret-color: #2874f0;
+    border-color: #2874f0;
+}
+.btn0{
+    position: relative;
+   
+    height: 52px;
+    width: 50px;
+    border-radius: 10px;
+   bottom: -4px;
+cursor: pointer;
+position: relative;
+
+}
+.btn1{
+    font-size: 20px;
+cursor: pointer;
+height:30px;
+width:50px;
+box-sizing: border-box;
+border-radius: 5px;
+background: linear-gradient(black,white);
+
+}
+.btn1:hover{
+background: #fff;
+border:4px solid rgb(0, 255, 110);
+}
+   </style>
+</head>
+<body>
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                
+                    <button class="btn1"onclick="document.getElementById('id01')"><i class="fa fa-user"></i></button>
+                 <button  class="btn1"onclick="document.getElementById('id02')"><i class="fa fa-sign-in"></i></button>
+                    
+                
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" style="color: white;">FOOTWEAR</a>
+                <a href="#">ELECTRONICS</a>
+                <a href="#">BEAUTY-PRODUCTS</a>
+                <a href="#">HOME-PRODUCTS</a>
+              </div>
+              
+              <div id="main">
+                
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+              </script>
+                
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+            <ul class="menu-items">
+                <li><a href="firstpage.html" style="color: blueviolet;">Home</a></li>
+                <li><a href="#sellers">About</a></li>
+                <li><a href="#news">team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo2.jpeg" alt="" style="border-radius: 6px;">
+            </div>
+            <form role="search">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" onmouseup="window.location.href='search.html'"><button class="btn0"><i class="fa fa-search" style="font-size: 20px;"></i></button>
+                </div>
+            </form>
+        </div>
+        
+    </nav>
+<h2 class="iop" style="display: flex; text-align: center;">FOOTWEAR</h2>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="images/slider4.jpg" style="width:105%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="images/slider5.jpg" style="width:105%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="images/slider6.jpg" style="width:105%">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="images/slider7.jpg" style="width:105%">
+    <div class="text">Caption four</div>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+    </script>
+
+
+
+
+
+    <div class="container">
+
+
+
+
+        <header>
+            
+            <div class="shopping">
+                <img src="images/addtoc.jpeg">
+              <span class="quantity">0</span>
+            </div>
+            <h2 class="open">open</h4>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>PRODUCTS</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+            <div class="nextpage">buy-now</div>
+        </div>
+    </div>
+            <footer>
+            <div class="footer-container container">
+                <div class="content_1">
+                    <img src="logo2.jpeg" alt="logo">
+                    <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                    <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+                </div>
+                <div class="content_2">
+                    <h4>SHOPPING</h4>
+                    <a href="#sellers">Clothing Store</a>
+                    <a href="#sellers">Trending Shoes</a>
+                    <a href="#sellers">Accessories</a>
+                    <a href="#sellers">Sale</a>
+                </div>
+                <div class="content_3">
+                    <h4>SHOPPING</h4>
+                    <a href="./contact.html">Contact Us</a>
+                    <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+                    <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+                    <a href="https://codepen.io/sandeshbodake/full/Jexxrv" target="_blank">Return and Exchange</a>
+                </div>
+                <div class="content_4">
+                    <h4>NEWLETTER</h4>
+                    <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                    <div class="f-mail">
+                        <input type="email" placeholder="Your Email">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="f-design">
+                <div class="f-design-txt container">
+                    <h3>Design and Code by Krish Agarwal</h3>
+                </div>
+            </div>
+        </footer>
+        <script>$(document).ready(function () {
+            $("a").on("click", function (event) {
+              if (this.hash !== "") {
+                event.preventDefault();
+          
+                var hash = this.hash;
+                $("html, body").animate(
+                  {
+                    scrollTop: $(hash).offset().top,
+                  },
+                  800,
+                  function () {
+                    window.location.hash = hash;
+                  }
+                );
+              }
+            });
+          });
+          
+          $(".menu-items a").click(function () {
+            $("#checkbox").prop("checked", false);
+          });
+          </script>
+    <script>let openShopping = document.querySelector('.shopping');
+        let closeShopping = document.querySelector('.closeShopping');
+        let list = document.querySelector('.list');
+        let listCard = document.querySelector('.listCard');
+        let body = document.querySelector('body');
+        let total = document.querySelector('.total');
+        let quantity = document.querySelector('.quantity');
+        let nextpage=document.querySelector('.nextpage');
+        openShopping.addEventListener('click', ()=>{
+            body.classList.add('active');
+        })
+        closeShopping.addEventListener('click', ()=>{
+            body.classList.remove('active');
+        })
+        nextpage.addEventListener('click', ()=>{
+            window.location.replace("checkoutform.html")
+        })
+        let products = [
+            {
+                id: 1,
+                name: 'Mi Athleisure Shoes',
+                image: "productimg1.jpeg",
+                price: 1499.00,
+                
+                 des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+            },
+            {
+                id: 2,
+                name: 'Roadster Men Textured Pu Sneakers',
+                image: 'productimage2.jpeg',
+                price: 923.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star"></span>`    
+            },
+            {
+                id: 3,
+                name: 'RAKE Blue Mens Running Shoes',
+                image: 'productimage3.jpeg',
+                price: 1049.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+                
+            },
+            {
+                id: 4,
+                name: 'Leather Formal Black Solid Oxford Shoes',
+                image: 'productimage4.jpeg',
+                price: 4796.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 5,
+                name: 'NORTH PLUS Black Mens Running Shoes',
+                image: 'productimage5.jpeg',
+                price: 1119.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 6,
+                name: 'Women Comfortable And Breathable Easy To Wear Light Weight Pink Shoes',
+                image: 'productimage6.jpeg',
+                price: 500.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 7,
+                name: 'Campus women zoe pro casual shoes',
+                image: 'productimage7.jpeg',
+                price: 450.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 8,
+                name: 'Superfit laceless sports shoes for men',
+                image: 'productimage8.jpeg',
+                price: 579.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 9,
+                name: 'PVC Poddar Mens Chappal',
+                image: 'productimage9.jpg',
+                price: 225.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 10,
+                name: 'Svaar Printed Black Hawai Chappal For Men',
+                image: 'productimage10.jpeg',
+                price: 399.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 11,
+                name: 'Women Fancy Partywear Wedding Heel Slippers',
+                image: 'productimage11.jpeg',
+                price: 453.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 12,
+                name: 'Bk Dream Women And Girl Block Heel Sandal Black',
+                image: 'productimage12.jpeg',
+                price: 499.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 13,
+                name: 'Girls stylish fancy Heel fashion sandals',
+                image: 'productimage13.jpeg',
+                price: 692.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 14,
+                name: 'Party Wear Modern High Heel Sandals for Girls',
+                image: 'productimage14.webp',
+                price: 516.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 15,
+                name: 'Luca Football Shoes | Strom Football Shoes',
+                image: 'productimage15.jpeg',
+                price: 899.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 16,
+                name: 'Nike Tiempo Legend 9 Academy TF shoes',
+                image: 'productimage16.webp',
+                price: 6647.00,
+                des:`<span>4.7</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 17,
+                name: `
+Sir Corbett
+Men Tan Brown Formal Shoes`,
+                image: 'productimage17.jpeg',
+                price: 832.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 18,
+                name: 'Teakwood Leather Men Solid Brown Round-Toe Casual Shoes',
+                image: 'productimage18.jpeg',
+                price: 879.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 19,
+                name: 'FORSSIL Z-Black Velvet Casual Formal Loafers Shoes',
+                image: 'productimage19.jpg',
+                price: 575.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 20,
+                name: 'AKIKO KANTAR-1 Formal Sandals,Coffee Casual Sandals,Coffee Partywear Sandals ',
+                image: 'productimage20.jpeg',
+                price: 426.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 21,
+                name: 'Waan Sport Athletic Lightweight Breathable Running Casual Shoes',
+                image: 'productimage21.jpeg',
+                price: 599.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 22,
+                name: 'Medallion Wholecut Oxford Leather Shoes - Cognac',
+                image: 'productimage22.jpeg',
+                price: 1299.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 23,
+                name: 'Synthetic Leather Light Weight Shoes Designer Shoes',
+                image: 'productimage23.jpeg',
+                price: 699.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 24,
+                name: 'White & Navy Solid Synthetic Leather & Comfort Foam Lace Up Sneakers For Men',
+                image: 'productimage24.jpeg',
+                price: 1499.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked  "></span>`
+              
+
+            },
+            {
+                id: 25,
+                name: 'Varion Badminton Shoes For Men  (Red)',
+                image: 'productimage25.jpeg',
+                price: 2539.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 26,
+                name: 'Puma BMW M Motorsport Drift Cat Men Shoes',
+                image: 'productimage26.jpeg',
+                price: 2749.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 27,
+                name: 'BMW M Motorsport Drift Cat 8 Sneakers For Women  (Black)',
+                image: 'productimage27.jpeg',
+                price: 3489.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star  checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 28,
+                name: 'Adidas originals retropy f2 lace up shoes',
+                image: 'productimage28.jpeg',
+                price: 1579.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 29,
+                name: 'BEM Mens Shoes Sneakers Boys Branded White Shoes',
+                image: 'productimage29.jpeg',
+                price: 799.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 30,
+                name: 'casual shoes for men/shoes men style/stylish shoes',
+                image: 'productimage30.jpeg',
+                price: 499.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 31,
+                name: 'STACK White Mens Sneakers',
+                image: 'productimage31.jpeg',
+                price: 2599.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 32,
+                name: 'Rojas Sneakers',
+                image: 'productimage32.jpeg',
+                price: 2079.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star  checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 33,
+                name: 'oadster Casual Shoes',
+                image: 'productimage33.jpeg',
+                price: 979.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },         {
+                id: 34,
+                name: `ADIDAS
+Women Woven Design Duramo Speed Running Shoes`,
+                image: 'productimage34.jpeg',
+                price: 3579.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 35,
+                name: 'BEST sneakers for man',
+                image: 'productimage35.jpeg',
+                price: 1279.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 36,
+                name: 'cargo sneakers black ',
+                image: 'productimage36.jpeg',
+                price: 1589.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+
+        ];
+        let listCards  = [];
+        function initApp(){
+            products.forEach((value, key) =>{
+                let newDiv = document.createElement('div');
+                newDiv.classList.add('item');
+                newDiv.innerHTML = `
+                    <img src="images/${value.image}">
+                    <div class="title">${value.name}</div>
+                    <div class="des">${value.des}</div>
+  
+ <h3 class="jk">in stock</h3></div>
+                    <div class="price"><span style='font-size: 100;'>&#8377</span>${value.price.toLocaleString()}</div>
+                    <button onclick="addToCard(${key})">Add To Card</button>
+                   ` 
+                list.appendChild(newDiv);
+            })
+        }
+        initApp();
+        function addToCard(key){
+            if(listCards[key] == null){
+                // copy product form list to list card
+                listCards[key] = JSON.parse(JSON.stringify(products[key]));
+                listCards[key].quantity = 1;
+            }
+            reloadCard();
+        }
+        function reloadCard(){
+            listCard.innerHTML = '';
+            let count = 0;
+            let totalPrice = 0;
+            listCards.forEach((value, key)=>{
+                totalPrice = totalPrice + value.price;
+                count = count + value.quantity;
+                if(value != null){
+                    let newDiv = document.createElement('li');
+                    newDiv.innerHTML = `
+                        <div><img src="images/${value.image}"/></div>
+                        <div>${value.name}</div>
+                        <div>${value.price.toLocaleString()}</div>
+                        <div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                            <div class="count">${value.quantity}</div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                        </div>`;
+                        listCard.appendChild(newDiv);
+                }
+            })
+            total.innerText = totalPrice.toLocaleString();
+            quantity.innerText = count;
+        }
+        function changeQuantity(key, quantity){
+            if(quantity == 0){
+                delete listCards[key];
+            }else{
+                listCards[key].quantity = quantity;
+                listCards[key].price = quantity * products[key].price;
+            }
+            reloadCard();
+        }
+        </script>
+</body>
+</html>

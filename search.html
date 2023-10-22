@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(68, 67, 67),white);
+}
+*{
+margin:0px;
+padding: 0px;
+box-sizing: border-box;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav{
+width: 100%;
+height: 75px;
+background-color:rgb(0, 0, 0);
+display: flex;
+
+}
+label.logo{
+font-size: 25px;
+color: aliceblue;
+margin: 0 100px;
+line-height: 60px;
+}
+nav ul{
+float: right;
+list-style-type: none;
+}
+nav ul li{
+display: inline;
+line-height: 60px;
+}
+nav ul li a{
+text-decoration: none;
+color: aliceblue;
+font-size: 14px;
+text-transform: capitalize;
+padding: 12px;
+
+border-radius: 10px;
+}
+nav ul li a.active,a:hover{
+background:lightgreen ;
+-webkit-text-fill-color: brown;
+border-color: blueviolet;
+}
+#checkbtn{
+float: right;
+line-height: 60px;
+margin-right: 10px;
+font-size: 40px;
+color:blanchedalmond;
+}
+#check{
+display: none;
+}
+#check:checked ~ ul{
+left:0;
+}
+@media(max-width:695px){
+label.logo{
+font-size: 30px;
+}
+#checkbtn{
+display: block;
+}
+
+nav ul{
+width: 100%;
+height: 200%;
+background-color:black;
+position: absolute;
+top:80px;
+left: -100%;
+transition: 0.5s;
+
+}
+nav ul li{
+display: block;
+text-align: center;
+
+} 
+}
+@media(max-width:450px){
+label.logo{
+font-size: 30px;
+margin :0 50px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+}
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+.bn{
+    text-align: center;
+    text-decoration: solid;
+  
+    transform: rotateX('90');
+}
+*{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1500px;
+            background-color: #24262b;;
+            margin: auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style-type: none;
+        }
+.footer{
+    background-color: #24262b;
+    padding:  70px 0;
+    margin-bottom: auto;
+    }
+    .footer-col{
+        width:100%;
+        padding:2px 15px;
+    margin-left: 3px;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color:#ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        list-style-type: none;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s hover;
+    }
+    .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+    display: inline-block;
+    list-style-type: none;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    }
+    .footer-col .social-links a:hover{
+        color: #24262b;
+        list-style-type: none;
+    }
+    @media(max-width:767px){
+        .footer-col{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    @media(max-width:574px){
+        .footer-col{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+</style>
+</head>
+<body>    <nav>
+    <input type="checkbox" id="check"name="" value="" >
+    <label for="check" id="checkbtn">
+<i class="fa fa-bars"></i>            
+    </label>
+<label class="logo" >
+shopping.com
+</label>
+
+<ul>
+<li><a class="active" href="firstpage.html">home</a></li>
+<li><a href="about.html">about</a></li>
+<li><a href="#">services</a></li>
+<li><a href="team.html">team</a></li>
+<li><a href="#">contact</a></li>
+<li><a href="loginform.html"><i class="fa fa-user-circle"></i></a></li>
+</ul>
+</nav>
+
+<h1 class="bn">SEARCH ON SHOOPING.COM</h1>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for items.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="footwear.html">SHOES</a></li>
+  <li><a href="footwear.html">FOOTWEAR</a></li>
+  <li><a href="footwear.html">SANDAL</a></li>
+<li><a href="footwear.html">WOMAN FOOTWEAR</a></li>
+  <li><a href="electronics.html">electronics</a></li>
+  <li><a href="electronics.html">headphones</a></li>
+
+  <li><a href="electronics.html">speakers</a></li>
+  <li><a href="electronics.html">earbuds</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } 
+        else if (txtValue.toLowerCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        }
+        
+        else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+<footer class="footer">
+  <div class="container">
+           <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">your services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                       
+                        <li><a href="#">payment option</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                       <div class="social-links">
+<l1> <a href="#"><i class="fa fa-facebook"></i></a></l1>
+<l1><a href="#"><i class="fa fa-twitter"></i></a></l1>
+<l1><a href="#"><i class="fa fa-instagram"></i></a></l1>
+<l1> <a href="#"><i class="fa fa-whatsapp"></i></a></l1>
+
+                       </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
